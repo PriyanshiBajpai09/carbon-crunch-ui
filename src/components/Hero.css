@@ -1,0 +1,133 @@
+.hero {
+  min-height: 100vh;
+  padding: 120px 100px 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(120deg, #0b0b0f 30%, #6f1d8c 100%);
+}
+
+.hero-left {
+  width: 45%;
+}
+
+.hero-left h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-left p {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 36px;
+}
+
+.explore-btn {
+  background: linear-gradient(90deg, #b84cff, #7f3dff);
+  border: none;
+  padding: 14px 38px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  gap: 60px;
+  margin-top: 60px;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  width: 45%;
+  position: relative;
+  height: 520px;
+}
+
+.nft-card {
+  position: absolute;
+  width: 360px;
+  aspect-ratio: 3 / 4;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid white;
+}
+
+.nft-card.back {
+  background-image: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b");
+  transform: rotate(-10deg);
+  left: 120px;
+  top: 60px;
+}
+
+.nft-card.front {
+  background-image: url("https://images.unsplash.com/photo-1526498460520-4c246339dccb");
+  transform: rotate(8deg);
+  left: 200px;
+  top: 0;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 60px;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 48px;
+  }
+
+  .hero-right {
+    height: 420px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 40px 16px 60px;
+    flex-direction: column;
+    background: linear-gradient(180deg, #0b0b0f 0%, #3a0f4d 100%);
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-right {
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .nft-card {
+    width: 240px;
+  }
+
+  .nft-card.back {
+    left: auto;
+    transform: rotate(-6deg);
+  }
+
+  .nft-card.front {
+    left: 40px;
+    transform: rotate(6deg);
+  }
+
+  .stats {
+    gap: 32px;
+  }
+}

@@ -1,0 +1,97 @@
+.popular-artists {
+  padding: 120px 80px;
+  background:
+    radial-gradient(circle at left, rgba(138, 43, 226, 0.4), rgba(0,0,0,0.95));
+  color: white;
+}
+
+/* Header */
+.artists-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.artists-header h2 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.artists-header button {
+  background: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Artists list */
+.artists-list {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Artist card */
+.artist {
+  text-align: center;
+}
+
+.artist img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.artist p {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+
+@media (max-width: 1024px) {
+  .popular-artists {
+    padding: 100px 50px;
+  }
+
+  .artists-header h2 {
+    font-size: 40px;
+  }
+
+  .artists-list {
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;   
+  }
+}
+
+
+@media (max-width: 768px) {
+  .popular-artists {
+    padding: 70px 24px;
+  }
+
+  .artists-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .artists-header h2 {
+    font-size: 32px;
+  }
+
+  .artists-list {
+    gap: 40px;
+  }
+
+  .artist img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .artist p {
+    font-size: 16px;
+  }
+}
